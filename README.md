@@ -1,1 +1,1 @@
-# quotation-management-management
+# quotation-management
