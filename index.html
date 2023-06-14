@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quotation Management System</title>
+    <head>
+        <title>Quotation Management System</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+</head>
+<body>
+    <header>
+        <div class="company-info">
+            <div class="company-address">
+                Atlas International Marine Services LLC<br>
+                651 N Broad St Ste 205 Middletown, DE 19709<br>
+                +1 3807772190<br>
+                sales@atlas-ims.com<br>
+                <a href="https://atlas-ims.com/">https://atlas-ims.com/</a>
+            </div>
+            <div class="company-logo">
+                <!-- Insert your company logo here -->
+            </div>
+        </div>
+        <h1>REQUEST FOR QUOTATION</h1>
+        <p>We would like to know if you are able to supply these items that need to be delivered on board.</p>
+    </header>
+
+    <section class="general-info">
+        <label for="supplier-name">SUPPLIER NAME:</label>
+        <input type="text" id="supplier-name"><br>
+        <label for="port">PORT:</label>
+        <input type="text" id="port"><br>
+        <label for="eta">ETA:</label>
+        <input type="text" id="eta"><br>
+        <label for="vessel">VESSEL:</label>
+        <input type="text" id="vessel"><br>
+        <label for="rfq">RFQ:</label>
+        <input type="text" id="rfq"><br>
+    </section>
+
+    <table>
+        <thead>
+            <tr>
+                <th>LINE</th>
+                <th>REF</th>
+                <th>DESCRIPTION</th>
+                <th>QTY</th>
+                <th>UNIT</th>
+                <th>REMARKS</th>
+                <th>U. PRICE US$</th>
+                <th>TOTAL US$</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="number"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="number" step="0.01"></td>
+                <td><input type="number" step="0.01" readonly></td>
+            </tr>
+            <!-- Repeat the above row for additional lines -->
+        </tbody>
+    </table>
+
+    <section class="totals-block">
+        <div>
+            <label class="label-output">SUB-TOTAL:</label>
+            <output id="sub-total"></output>
+        </div>
+        <div>
+            <label class="label-output">DISCOUNT (%):</label>
+            <select id="discount-percentage">
+                <!-- Add options for discount percentages -->
+            </select>
+        </div>
+        <div>
+            <label class="label-output">DISCOUNT ($):</label>
+            <output id="discount-amount"></output>
+        </div>
+        <div>
+            <label class="label-output">DELIVERY CHARGES:</label>
+            <input type="number" id="delivery-charges">
+        </div>
+        <div>
+            <label class="label-output">TOTAL:</label>
+            <output id="total"></output>
+        </div>
+    </section>
+
+    <footer>
+        <h2>IMPORTANT:</h2>
+        <p>- Indicate prices in USD currency.<br>
+        - Indicate terms of payment / Shipping costs (if any) / Discount / Lead time.<br>
+        - We require items to be quoted exactly with the brand and features requested. You may offer other brands and similar options, but it is mandatory to indicate the exact characteristics of the item your company is quoting.<br>
+        - That this request for quotation has been sent to several supplier contacts, we ask that if your company cannot supply the items or services requested, please respond to this email indicating NO BID, this way we will avoid sending you follow-up emails.<br>
+        - If you wish, we invite you to detail the services that your good company offers and the ports in which it can serve. This way we update our database to keep you in mind for future requests for quotation and/or avoid sending you requests for services or items that your company does not supply.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
